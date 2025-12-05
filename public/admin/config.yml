@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: username/repo # REPLACE THIS WITH YOUR GITHUB REPO (e.g., anthony/portfolio)
+  branch: main
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Cover Image", name: "coverImage", widget: "image"}
+      - label: "Author"
+        name: "author"
+        widget: "object"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Picture", name: "picture", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "showcase"
+    label: "Showcase"
+    folder: "content/showcase"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Project Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
