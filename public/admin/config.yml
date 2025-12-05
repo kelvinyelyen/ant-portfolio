@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: kelvinyelyen/ant-portfolio # REPLACE THIS WITH YOUR GITHUB REPO (e.g., anthony/portfolio)
+  repo: kelvinyelyen/ant-portfolio
   branch: main
 
 media_folder: "public/assets"
