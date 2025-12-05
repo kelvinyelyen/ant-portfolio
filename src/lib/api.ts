@@ -55,6 +55,10 @@ export function getAllContent(type: "blog" | "showcase", fields: string[] = []) 
         .map((slug) => getContentBySlug(type, slug, fields))
         .filter((item): item is Record<string, string | string[]> => item !== null)
         // sort posts by date in descending order
-        .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+        .sort((post1, post2) => {
+            const date1 = post1.date || "";
+            const date2 = post2.date || "";
+            return date1 > date2 ? -1 : 1;
+        });
     return content;
 }

@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function Showcase() {
     const projects = getAllContent("showcase", [
         "title",
+        "date",
         "description",
         "tags",
         "link",

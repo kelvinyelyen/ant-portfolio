@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -78,13 +79,13 @@ export default function Hero() {
                         <div className="relative w-full max-w-lg mx-auto aspect-square">
                             <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-600 rounded-full opacity-20 blur-3xl animate-pulse" />
                             <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-slate-800/50 backdrop-blur-sm shadow-2xl flex items-center justify-center group">
-                                {/* Placeholder for user image */}
-                                <div className="text-center p-8">
-                                    <div className="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
-                                        AA
-                                    </div>
-                                    <p className="text-slate-400">Profile Image Placeholder</p>
-                                </div>
+                                <Image
+                                    src="/assets/profile.jpg"
+                                    alt="Anthony Amihere"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    priority
+                                />
                             </div>
                         </div>
                     </motion.div>
