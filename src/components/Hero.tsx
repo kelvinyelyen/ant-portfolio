@@ -42,7 +42,7 @@ export default function Hero() {
                             using modern tools and technologies.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                             <Link
                                 href="#showcase"
                                 className="px-8 py-3 bg-accent text-primary font-bold rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)]"
@@ -55,17 +55,6 @@ export default function Hero() {
                             >
                                 Contact Me
                             </Link>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
-                            <div className="bg-secondary/30 p-4 rounded-lg border border-white/5">
-                                <h4 className="text-white font-bold text-2xl">5+</h4>
-                                <p className="text-slate-500 text-sm">Years Experience</p>
-                            </div>
-                            <div className="bg-secondary/30 p-4 rounded-lg border border-white/5">
-                                <h4 className="text-white font-bold text-2xl">50+</h4>
-                                <p className="text-slate-500 text-sm">Projects Completed</p>
-                            </div>
                         </div>
                     </motion.div>
 
