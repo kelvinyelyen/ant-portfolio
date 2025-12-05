@@ -45,7 +45,7 @@ export default function Showcase() {
                                     </h4>
                                     {project.link && (
                                         <Link
-                                            href={project.link}
+                                            href={project.link as string}
                                             target="_blank"
                                             className="text-slate-400 hover:text-white transition-colors"
                                         >
@@ -60,8 +60,7 @@ export default function Showcase() {
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags &&
-                                        // @ts-ignore - tags is parsed as string[] by gray-matter but type is Record<string,string> in our utility
-                                        project.tags.map((tag: string) => (
+                                        (project.tags as string[]).map((tag: string) => (
                                             <span
                                                 key={tag}
                                                 className="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full"

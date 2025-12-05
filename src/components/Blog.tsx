@@ -41,8 +41,8 @@ export default function Blog() {
                             <div className="w-full md:w-48 h-32 bg-slate-800 rounded-lg overflow-hidden shrink-0 relative">
                                 {post.coverImage ? (
                                     <Image
-                                        src={post.coverImage}
-                                        alt={post.title}
+                                        src={post.coverImage as string}
+                                        alt={post.title as string}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />

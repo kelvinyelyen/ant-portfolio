@@ -53,8 +53,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                         {post.coverImage && (
                             <div className="relative w-full h-[400px] bg-slate-800 rounded-2xl overflow-hidden mb-12 shadow-2xl">
                                 <Image
-                                    src={post.coverImage}
-                                    alt={post.title}
+                                    src={post.coverImage as string}
+                                    alt={post.title as string}
                                     fill
                                     className="object-cover"
                                     priority
@@ -64,7 +64,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                     </header>
 
                     <div className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-accent prose-strong:text-white">
-                        <ReactMarkdown>{post.content}</ReactMarkdown>
+                        <ReactMarkdown>{post.content as string}</ReactMarkdown>
                     </div>
                 </div>
             </article>
