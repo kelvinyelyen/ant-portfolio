@@ -1,5 +1,6 @@
 import { getAllContent } from "@/lib/api";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Showcase() {
@@ -31,12 +32,18 @@ export default function Showcase() {
                             className="group relative bg-secondary/40 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:-translate-y-1"
                         >
                             <div className="h-48 bg-slate-800 relative overflow-hidden">
-                                {/* Placeholder for project image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-slate-600 bg-slate-900">
-                                    {project.image ? (
-                                        <span className="text-sm">{project.image}</span>
-                                    ) : "Project Image"}
-                                </div>
+                                {project.image ? (
+                                    <Image
+                                        src={project.image as string}
+                                        alt={project.title as string || "Project Image"}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                ) : (
+                                    <div className="absolute inset-0 flex items-center justify-center text-slate-600 bg-slate-900">
+                                        Project Image
+                                    </div>
+                                )}
                             </div>
 
                             <div className="p-6">
